@@ -2,7 +2,9 @@ import { Field, ObjectType } from '@nestjs/graphql';
 import { ElectricGuitar } from '../../interfaces/electric-guitar.interface';
 import { AbstractInstrumentType } from './abstract-instrument.type';
 
-@ObjectType()
+@ObjectType({
+  implements: [AbstractInstrumentType],
+})
 export class ElectricGuitarType extends AbstractInstrumentType<ElectricGuitar> {
   @Field()
   numberOfStrings: number;
