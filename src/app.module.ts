@@ -9,9 +9,10 @@ import { DataSourceModule } from './data-source/data-source.module';
       debug: true,
       playground: true,
       autoSchemaFile: true,
+      installSubscriptionHandlers: true,
     }),
     GqlModule,
     DataSourceModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }
