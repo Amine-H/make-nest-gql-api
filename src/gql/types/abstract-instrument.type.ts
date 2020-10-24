@@ -6,7 +6,7 @@ import { CategoryType } from './category.type';
 @InterfaceType()
 export abstract class AbstractInstrumentType<
   T extends Instrument
-> extends AbstractType<T> {
+  > extends AbstractType<T> {
   @Field()
   name: string;
 
